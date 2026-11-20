@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — MediaGo</title>
+  <style>
+    :root {
+      --bg-top: #0A0E17;
+      --bg-mid: #111827;
+      --bg-bottom: #090D16;
+      --surface: #182032;
+      --surface-inner: #0E1422;
+      --border: #26334D;
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+      --text-muted: #94A3B8;
+      --accent-blue: #00A8FF;
+      --accent-cyan: #00F5D4;
+      --accent-amber: #F59E0B;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bottom) 100%);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      min-height: 100vh;
+      padding: 20px 14px 40px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: radial-gradient(circle at top left, rgba(0, 168, 255, 0.18), transparent 55%),
+        radial-gradient(circle at top right, rgba(245, 158, 11, 0.14), transparent 55%),
+        var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      background: rgba(0, 245, 212, 0.12);
+      border: 1px solid rgba(0, 245, 212, 0.35);
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: rgba(0, 168, 255, 0.16);
+      border: 1px solid rgba(0, 168, 255, 0.4);
+      color: var(--accent-blue);
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      margin-bottom: 9px;
+      color: var(--text-secondary);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: var(--accent-cyan);
+      font-weight: 800;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .perm-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .perm-item {
+      background: var(--surface-inner);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .perm-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+
+    .perm-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+    }
+
+    .highlight-box {
+      background: rgba(0, 168, 255, 0.08);
+      border: 1px solid rgba(0, 168, 255, 0.3);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      font-size: 13.5px;
+    }
+
+    a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 22px;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer .dev {
+      color: var(--accent-cyan);
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      margin-bottom: 4px;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        color: #111827;
+      }
+
+      .hero,
+      .card,
+      .perm-item,
+      .footer {
+        background: #FFFFFF;
+        border-color: #CBD5E1;
+      }
+
+      h1 {
+        -webkit-text-fill-color: #0F172A;
+      }
+
+      h2,
+      strong,
+      .perm-name,
+      .footer .dev {
+        color: #0F172A;
+      }
+
+      p,
+      li,
+      .perm-desc,
+      .meta {
+        color: #334155;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="badge">Privacy Policy</div>
+      <h1>MediaGo Privacy Policy</h1>
+      <div class="meta">Effective Date: November 2026 &nbsp;•&nbsp; App Version: 1.0.0 &nbsp;•&nbsp; Developer: NKM IT
+        Solution</div>
+      <p>
+        <strong>MediaGo</strong> ("we", "our", or "the App"), developed by
+        <strong>NKM IT Solution (Pro. Naresh Meghwal)</strong>,
+        is an on-device media downloader and offline audio/video player. Your privacy is fundamental to how MediaGo is
+        built:
+        the App works directly on your device and does <strong>not</strong> collect, store, sell, or share your personal
+        data on external developer servers.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2><span class="num">1</span> Information We Do Not Collect</h2>
+      <p>MediaGo is designed with a local-first architecture. We do <strong>not</strong>:</p>
+      <ul>
+        <li>Require account registration, phone numbers, or personal profiles to use the App.</li>
+        <li>Collect, upload, or analyze your downloaded files, local music/video library, or playback history.</li>
+        <li>Sell, rent, or trade any user data with third-party advertisers or data brokers.</li>
+        <li>Track your physical GPS location or access your contacts, SMS messages, or call logs.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">2</span> Data Stored Locally on Your Device</h2>
+      <p>To deliver core features smoothly, MediaGo stores small operational records exclusively on your device's
+        private app storage:</p>
+      <ul>
+        <li><strong>Download History &amp; Deleted Blacklist:</strong> Titles, download statuses, local file paths/URIs,
+          and a list of items you have deleted so removed files are not re-imported during storage refreshes.</li>
+        <li><strong>Playlists &amp; Player Preferences:</strong> Custom playlists, favorite tracks, equalizer band
+          presets, and playback settings.</li>
+        <li><strong>Optional Session Cookies:</strong> If you voluntarily choose to sign in via the optional Instagram
+          connection inside the navigation drawer, session cookies are stored only on your device to fulfill download
+          requests you initiate. You can disconnect and wipe these cookies at any time.</li>
+        <li><strong>On-Device Clipboard Check:</strong> When MediaGo is brought to the foreground, it checks your
+          clipboard locally to show a quick <em>"Smart Paste &amp; Parse"</em> button if a supported media link is
+          detected. Clipboard contents are never stored or transmitted unless you explicitly choose to parse the link.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">3</span> Android Permissions &amp; How They Are Used</h2>
+      <p>MediaGo only requests permissions required for downloading, saving, playing, and visualizing your media:</p>
+      <div class="perm-grid">
+        <div class="perm-item">
+          <div class="perm-name">INTERNET</div>
+          <div class="perm-desc">Fetches media metadata and downloads user-requested videos, reels, audio, or images
+            directly from the link you provide.</div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-name">READ_MEDIA_VIDEO / READ_MEDIA_AUDIO / STORAGE</div>
+          <div class="perm-desc">Saves downloaded media to your device's <strong>Downloads/MediaGo</strong> folder and
+            allows the built-in player to browse, play, rename, and delete your local audio and video files.</div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-name">RECORD_AUDIO &amp; MODIFY_AUDIO_SETTINGS</div>
+          <div class="perm-desc">Used strictly by Android's audio visualizer and 8-preset equalizer during local
+            playback to render real-time audio waveforms and bass/treble effects. MediaGo never records, saves, or
+            transmits microphone or voice audio.</div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-name">POST_NOTIFICATIONS</div>
+          <div class="perm-desc">Displays active download progress, completion alerts, and lock-screen media playback
+            controls.</div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-name">FOREGROUND_SERVICE &amp; WAKE_LOCK</div>
+          <div class="perm-desc">Keeps ongoing downloads and background audio/video playback running reliably when the
+            screen turns off or you switch apps.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">4</span> Third-Party Platforms &amp; External Links</h2>
+      <p>
+        When you paste or share a link from external websites or social platforms (such as YouTube, Instagram,
+        X/Twitter, Facebook, or direct media URLs),
+        MediaGo sends network requests directly from your device to those platforms to resolve and download the
+        requested media.
+      </p>
+      <p>
+        Those external services are governed by their own privacy policies and terms of service. We do not control how
+        third-party websites handle requests made from your device.
+      </p>
+      <div class="highlight-box">
+        <strong>User Responsibility:</strong> Please ensure you have the necessary rights or permission from the content
+        owner before downloading, saving, or sharing any media, and always comply with applicable copyright laws.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">5</span> Data Control &amp; Deletion</h2>
+      <p>Because all MediaGo data resides locally on your device, you remain in full control at all times:</p>
+      <ul>
+        <li><strong>Delete Individual Files:</strong> Tap the delete/trash icon on any downloaded item to permanently
+          remove both the physical media file and its history entry from MediaGo.</li>
+        <li><strong>Clear Optional Session Cookies:</strong> Open the navigation drawer and tap
+          <em>Instagram Connected &rarr; Disconnect</em> to immediately erase locally saved cookies.</li>
+        <li><strong>Erase All App Data:</strong> Clearing MediaGo's app storage in Android Settings or uninstalling the
+          App permanently removes all preferences, playlists, and history.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">6</span> Children's Privacy</h2>
+      <p>
+        MediaGo does not knowingly collect personal information from children under the age of 13 (or the minimum
+        digital consent age in your jurisdiction).
+        Because the App does not collect personal user accounts or transmit telemetry, no personal data of minors is
+        collected by us.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">7</span> Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect improvements to MediaGo or changes in legal and
+        platform requirements.
+        Any updates will be reflected by the "Effective Date" shown at the top of this page and inside the App.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">8</span> Contact Us</h2>
+      <p>
+        If you have questions, feedback, or privacy concerns regarding MediaGo, please contact the developer:
+      </p>
+      <ul>
+        <li><strong>Developer:</strong> NKM IT Solution (Pro. Naresh Meghwal)</li>
+        <li><strong>App Name:</strong> MediaGo (Downloader &amp; Player)</li>
+        <li><strong>Email:</strong> <a href="mailto:support@nkmitsolution.com">support@nkmitsolution.com</a></li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <div class="dev">DEVELOPED BY NKM IT SOLUTION</div>
+      <div>(PRO. NĀRĒSH MĒGHWĀL) &nbsp;•&nbsp; MediaGo Privacy Policy</div>
+    </footer>
+  </main>
+</body>
+
+</html>
