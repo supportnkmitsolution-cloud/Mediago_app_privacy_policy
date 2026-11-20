@@ -277,12 +277,12 @@
     </header>
 
     <section class="card">
-      <h2><span class="num">1</span> Information We Do Not Collect</h2>
-      <p>MediaGo is designed with a local-first architecture. We do <strong>not</strong>:</p>
+      <h2><span class="num">1</span> Information We Do Not Collect Directly</h2>
+      <p>MediaGo is designed with a local-first architecture. The developer (<strong>NKM IT Solution</strong>) does <strong>not</strong>:</p>
       <ul>
         <li>Require account registration, phone numbers, or personal profiles to use the App.</li>
-        <li>Collect, upload, or analyze your downloaded files, local music/video library, or playback history.</li>
-        <li>Sell, rent, or trade any user data with third-party advertisers or data brokers.</li>
+        <li>Collect, upload, or analyze your downloaded files, local music/video library, or playback history on developer servers.</li>
+        <li>Sell or trade your personal files or local media library to data brokers.</li>
         <li>Track your physical GPS location or access your contacts, SMS messages, or call logs.</li>
       </ul>
     </section>
@@ -296,9 +296,6 @@
           and a list of items you have deleted so removed files are not re-imported during storage refreshes.</li>
         <li><strong>Playlists &amp; Player Preferences:</strong> Custom playlists, favorite tracks, equalizer band
           presets, and playback settings.</li>
-        <li><strong>Optional Session Cookies:</strong> If you voluntarily choose to sign in via the optional Instagram
-          connection inside the navigation drawer, session cookies are stored only on your device to fulfill download
-          requests you initiate. You can disconnect and wipe these cookies at any time.</li>
         <li><strong>On-Device Clipboard Check:</strong> When MediaGo is brought to the foreground, it checks your
           clipboard locally to show a quick <em>"Smart Paste &amp; Parse"</em> button if a supported media link is
           detected. Clipboard contents are never stored or transmitted unless you explicitly choose to parse the link.
@@ -307,13 +304,48 @@
     </section>
 
     <section class="card">
-      <h2><span class="num">3</span> Android Permissions &amp; How They Are Used</h2>
-      <p>MediaGo only requests permissions required for downloading, saving, playing, and visualizing your media:</p>
+      <h2><span class="num">3</span> Advertising &amp; Google AdMob (Third-Party SDK)</h2>
+      <p>
+        To keep MediaGo free to use, the App integrates <strong>Google AdMob</strong>
+        (<code>com.google.android.gms:play-services-ads</code>) and <strong>Google User Messaging Platform (UMP)</strong>
+        to display interstitial advertisements.
+      </p>
+      <p>
+        When ads are requested or displayed, Google and its advertising partners may automatically collect and process
+        limited technical and advertising data, including:
+      </p>
+      <ul>
+        <li><strong>Advertising ID (<code>AD_ID</code>):</strong> Your device's resettable Android Advertising ID, used
+          for ad delivery, frequency capping, measurement, and personalized or non-personalized ads (based on your
+          consent and device settings).</li>
+        <li><strong>Approximate Location (IP Address):</strong> Used to serve region-appropriate ads and prevent
+          invalid traffic or ad fraud.</li>
+        <li><strong>Device &amp; App Diagnostics:</strong> Device model, OS version, app version, ad impressions,
+          taps, and crash/performance telemetry required for SDK reliability.</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Your Ad Choices &amp; Opt-Out:</strong> You can reset or delete your Advertising ID at any time in your
+        device's <em>Android Settings &rarr; Privacy / Google &rarr; Ads</em>. Where required by law (such as the EEA and
+        UK), MediaGo requests your consent via Google's UMP consent prompt before serving ads. Learn more at
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from apps</a>
+        and
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Policies</a>.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">4</span> Android Permissions &amp; How They Are Used</h2>
+      <p>MediaGo only requests permissions required for downloading, saving, playing, visualizing media, and displaying ads:</p>
       <div class="perm-grid">
         <div class="perm-item">
-          <div class="perm-name">INTERNET</div>
-          <div class="perm-desc">Fetches media metadata and downloads user-requested videos, reels, audio, or images
-            directly from the link you provide.</div>
+          <div class="perm-name">INTERNET &amp; ACCESS_NETWORK_STATE</div>
+          <div class="perm-desc">Fetches media metadata, downloads user-requested media directly from links you provide,
+            checks connectivity status, and loads Google AdMob ads.</div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-name">com.google.android.gms.permission.AD_ID</div>
+          <div class="perm-desc">Used exclusively by Google AdMob to access your device's Advertising ID for ad
+            delivery, attribution, and fraud prevention.</div>
         </div>
         <div class="perm-item">
           <div class="perm-name">READ_MEDIA_VIDEO / READ_MEDIA_AUDIO / STORAGE</div>
@@ -340,10 +372,9 @@
     </section>
 
     <section class="card">
-      <h2><span class="num">4</span> Third-Party Platforms &amp; External Links</h2>
+      <h2><span class="num">5</span> Third-Party Platforms &amp; External Links</h2>
       <p>
-        When you paste or share a link from external websites or social platforms (such as YouTube, Instagram,
-        X/Twitter, Facebook, or direct media URLs),
+        When you paste or share a link from supported external websites or social platforms,
         MediaGo sends network requests directly from your device to those platforms to resolve and download the
         requested media.
       </p>
@@ -353,35 +384,33 @@
       </p>
       <div class="highlight-box">
         <strong>User Responsibility:</strong> Please ensure you have the necessary rights or permission from the content
-        owner before downloading, saving, or sharing any media, and always comply with applicable copyright laws.
+        owner before downloading, saving, or sharing any media, and always comply with applicable copyright and platform rules.
       </div>
     </section>
 
     <section class="card">
-      <h2><span class="num">5</span> Data Control &amp; Deletion</h2>
-      <p>Because all MediaGo data resides locally on your device, you remain in full control at all times:</p>
+      <h2><span class="num">6</span> Data Control &amp; Deletion</h2>
+      <p>Because MediaGo's user files and preferences reside locally on your device, you remain in control at all times:</p>
       <ul>
         <li><strong>Delete Individual Files:</strong> Tap the delete/trash icon on any downloaded item to permanently
           remove both the physical media file and its history entry from MediaGo.</li>
-        <li><strong>Clear Optional Session Cookies:</strong> Open the navigation drawer and tap
-          <em>Instagram Connected &rarr; Disconnect</em> to immediately erase locally saved cookies.</li>
+        <li><strong>Manage Ad Preferences:</strong> Reset or delete your Advertising ID in Android Settings, or update
+          your consent choices if applicable in your region.</li>
         <li><strong>Erase All App Data:</strong> Clearing MediaGo's app storage in Android Settings or uninstalling the
-          App permanently removes all preferences, playlists, and history.</li>
+          App permanently removes all local preferences, playlists, and history.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2><span class="num">6</span> Children's Privacy</h2>
+      <h2><span class="num">7</span> Children's Privacy</h2>
       <p>
-        MediaGo does not knowingly collect personal information from children under the age of 13 (or the minimum
-        digital consent age in your jurisdiction).
-        Because the App does not collect personal user accounts or transmit telemetry, no personal data of minors is
-        collected by us.
+        MediaGo is not directed to children under the age of 13 (or the minimum digital consent age in your
+        jurisdiction), and we do not knowingly collect personal information from children.
       </p>
     </section>
 
     <section class="card">
-      <h2><span class="num">7</span> Changes to This Privacy Policy</h2>
+      <h2><span class="num">8</span> Changes to This Privacy Policy</h2>
       <p>
         We may update this Privacy Policy from time to time to reflect improvements to MediaGo or changes in legal and
         platform requirements.
@@ -390,14 +419,14 @@
     </section>
 
     <section class="card">
-      <h2><span class="num">8</span> Contact Us</h2>
+      <h2><span class="num">9</span> Contact Us</h2>
       <p>
         If you have questions, feedback, or privacy concerns regarding MediaGo, please contact the developer:
       </p>
       <ul>
         <li><strong>Developer:</strong> NKM IT Solution (Pro. Naresh Meghwal)</li>
         <li><strong>App Name:</strong> MediaGo (Downloader &amp; Player)</li>
-        <li><strong>Email:</strong> <a href="mailto:support@nkmitsolution.com">support@nkmitsolution.com</a></li>
+        <li><strong>Email:</strong> <a href="mailto:support.nkmitsolution@gmail.com">support.nkmitsolution@gmail.com</a></li>
       </ul>
     </section>
 
